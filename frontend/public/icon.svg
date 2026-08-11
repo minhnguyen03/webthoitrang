@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Fashion Shop icon">
+  <rect width="120" height="120" rx="24" fill="#20211f"/>
+  <circle cx="60" cy="42" r="18" fill="#bd8a37"/>
+  <path d="M32 95c7-24 17-38 28-38s21 14 28 38H32Z" fill="#a84f2a"/>
+  <path d="M42 95c4-15 10-24 18-24s14 9 18 24H42Z" fill="#0f6f68"/>
+</svg>

@@ -1,0 +1,88 @@
+<!-- Floating AI Chatbot Widget Fragment -->
+<!-- Include in pages: <div th:replace="~{fragments/chatbot-widget :: chatbot-widget}"></div> -->
+
+<div th:fragment="chatbot-widget">
+    <!-- Floating Action Button -->
+    <div id="chatbotFab" class="chatbot-fab" onclick="toggleChatWidget()">
+        <div class="chatbot-fab-icon">
+            <i class="bi bi-robot" id="fabIconMain"></i>
+        </div>
+        <span class="chatbot-fab-badge" id="chatbotBadge" style="display:none;">0</span>
+        <div class="chatbot-fab-tooltip" id="fabTooltip" style="display:none;">Cần tư vấn gì không? 💬</div>
+    </div>
+
+    <!-- Chat Popup -->
+    <div id="chatbotPopup" class="chatbot-popup" style="display:none;">
+        <!-- Header -->
+        <div class="chatbot-popup-header">
+            <div class="chatbot-popup-header-left">
+                <div class="chatbot-popup-avatar">
+                    <i class="bi bi-robot"></i>
+                </div>
+                <div>
+                    <div class="chatbot-popup-title">Trợ Lý AI Thời Trang</div>
+                    <div class="chatbot-popup-status">
+                        <span class="chatbot-status-dot"></span> Online
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-popup-header-actions">
+                <button class="chatbot-header-btn" onclick="window.open('/ai-chatbot', '_blank')" title="Mở rộng toàn màn hình">
+                    <i class="bi bi-arrows-fullscreen"></i>
+                </button>
+                <button class="chatbot-header-btn" onclick="clearWidgetChat()" title="Xóa lịch sử">
+                    <i class="bi bi-trash3"></i>
+                </button>
+                <button class="chatbot-header-btn" onclick="toggleChatWidget()" title="Đóng">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="chatbot-quick-actions" id="chatbotQuickActions">
+            <!-- Populated by JS based on current page -->
+        </div>
+
+        <!-- Messages Area -->
+        <div class="chatbot-messages" id="widgetMessages">
+            <!-- Welcome message inserted by JS -->
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="chatbot-typing" id="widgetTyping" style="display:none;">
+            <div class="chatbot-typing-dots">
+                <span></span><span></span><span></span>
+            </div>
+            <span class="chatbot-typing-text">AI đang trả lời...</span>
+        </div>
+
+        <!-- Input Area -->
+        <div class="chatbot-input-area">
+            <input type="text"
+                   class="chatbot-input"
+                   id="widgetInput"
+                   placeholder="Nhập câu hỏi của bạn..."
+                   onkeypress="handleWidgetKeyPress(event)"
+                   autocomplete="off">
+            <button class="chatbot-voice-btn" id="widgetVoiceBtn" onclick="toggleWidgetVoice()" title="Nhập giọng nói">
+                <i class="bi bi-mic"></i>
+            </button>
+            <button class="chatbot-send-btn" onclick="sendWidgetMessage()" title="Gửi">
+                <i class="bi bi-send-fill"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/chatbot-widget.css">
+    <link rel="stylesheet" href="/css/ai-chatbot-enhanced.css">
+
+    <!-- JS Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
+
+    <!-- Widget JS -->
+    <script src="/js/chatbot-widget.js"></script>
+</div>
+

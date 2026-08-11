@@ -1,0 +1,78 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### OS ###
+.DS_Store
+Thumbs.db
+
+### Logs ###
+*.log
+logs/
+
+### Database ###
+*.db
+*.sqlite
+
+### Temporary files ###
+*.tmp
+*.temp
+*.swp
+*~
+
+### Documentation (temporary/debug) ###
+FIX_*.md
+DEBUG_*.md
+URGENT_*.md
+QUICK_*.md
+ACTION_*.md
+TEST_*.md
+SUMMARY_*.md
+
+### SQL Scripts (keep important ones manually) ###
+cleanup_*.sql
+sync_*.sql
+verify_*.sql
+fix_*.sql
+
+### Application Specific ###
+application-local.properties
+application-dev.properties
+/src/main/resources/static/image_product/*
+!src/main/resources/static/image_product/.gitkeep
+
+### Executables ###
+*.exe
+!mvnw.cmd
+
+### Postman Collections (optional) ###
+# *.postman_collection.json
